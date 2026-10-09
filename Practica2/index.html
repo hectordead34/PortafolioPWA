@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 2 - App Shell</title>
+    
+    <!-- Enlace al Manifest (requerido para la Splash Screen nativa) -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Color de la barra de navegación en móviles -->
+    <meta name="theme-color" content="#2196F3">
+
+    <style>
+        /* --- ESTILOS CSS --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+
+        /* 1. Header (Cabecera del App Shell) */
+        header {
+            background-color: #2196F3;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+
+        main {
+            flex: 1;
+            padding: 1.5rem;
+            overflow-y: auto;
+        }
+
+        main h2 {
+            margin-bottom: 0.5rem;
+            color: #1976D2;
+        }
+
+        main p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* 3. Menú de Navegación (Inferior estilo App Móvil) */
+        nav {
+            background-color: #ffffff;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-around;
+            padding: 0.75rem 0;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+            z-index: 10;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #757575;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #2196F3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Mi Aplicación PWA
+    </header>
+
+    <main>
+        <h2>Bienvenido</h2>
+        <p>Esta interfaz está diseñada con la estructura de un <strong>App Shell</strong> (Header, Contenedor y Navegación), ideal para cargar de forma instantánea en dispositivos móviles y de escritorio.</p>
+    </main>
+
+    <nav>
+        <a href="#" class="active">🏠 Inicio</a>
+        <a href="#">🔍 Buscar</a>
+        <a href="#">👤 Perfil</a>
+    </nav>
+
+</body>
+</html>

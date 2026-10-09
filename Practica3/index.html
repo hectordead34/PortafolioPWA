@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#317EFB">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="estilos.css">
+  <title>PWA App Shell</title>
+</head>
+<body>
+  <header class="app-header">
+    <h1>Mi Aplicación PWA</h1>
+    <nav class="app-nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#registros">Registros</a>
+    </nav>
+  </header>
+
+  <main class="app-content">
+    <section class="card">
+      <h2>Contenido Principal (Modo Offline)</h2>
+      <p>Guarda y visualiza datos guardados mediante IndexedDB:</p>
+      
+      <div style="margin: 15px 0; display: flex; gap: 8px;">
+        <input type="text" id="input-registro" placeholder="Escribe un registro..." style="padding: 8px; flex: 1;">
+        <button id="btn-agregar" style="padding: 8px 16px; background: #317EFB; color: white; border: none; border-radius: 4px; cursor: pointer;">Guardar</button>
+      </div>
+
+      <h3>Registros Almacenados:</h3>
+      <div id="data-container">Cargando información...</div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
