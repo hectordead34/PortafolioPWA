@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 4: IndexedDB</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Ejercicio 4: Persistencia con IndexedDB</h1>
+
+    <!-- Estado de la Base de Datos -->
+    <div class="card">
+      <h2>Estado de la Base de Datos</h2>
+      <p>IndexedDB: <span id="db-status" class="badge">Conectando...</span></p>
+    </div>
+
+    <!-- Formulario para agregar registros -->
+    <div class="card">
+      <h2>Guardar Nuevo Registro</h2>
+      <form id="todo-form">
+        <input type="text" id="task-title" placeholder="Título de la tarea o nota..." required>
+        <textarea id="task-desc" placeholder="Descripción breve..." rows="2" required></textarea>
+        <button type="submit" class="btn btn-primary">Guardar en IndexedDB</button>
+      </form>
+    </div>
+
+    <!-- Lista de registros almacenados -->
+    <div class="card">
+      <h2>Registros Guardados Localmente</h2>
+      <ul id="task-list" class="task-list">
+      </ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
