@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3: Notificaciones Locales y SW</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Ejercicio 3: Notificaciones Locales</h1>
+
+    <!-- Estado del Service Worker y Permisos -->
+    <div class="card">
+      <h2>Estado del Sistema</h2>
+      <p>Service Worker: <span id="sw-status" class="badge">Comprobando...</span></p>
+      <p style="margin-top: 8px;">Permisos de Notificación: <span id="notif-status" class="badge">Consultando...</span></p>
+    </div>
+
+    <!-- Controles de Notificaciones -->
+    <div class="card">
+      <h2>Gestión de Notificaciones</h2>
+      <p class="description">Las notificaciones requieren que otorgues permisos explícitos en tu navegador.</p>
+      
+      <div class="controls">
+        <button id="btn-request" class="btn btn-primary">1. Solicitar Permisos</button>
+        <button id="btn-notify" class="btn btn-success" disabled>2. Enviar Notificación Local</button>
+      </div>
+    </div>
+
+    <!-- Registro de Bitácora -->
+    <div class="card">
+      <h2>Consola de Eventos</h2>
+      <div id="log-box" class="log-box">
+        <p class="log-item System">Sistema listo.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
