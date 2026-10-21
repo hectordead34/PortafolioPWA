@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 5: Estrategias de Caché</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Ejercicio 5: Estrategias Dinámicas de Caché</h1>
+
+    <div class="card">
+      <h2>Estado de PWA</h2>
+      <p>Service Worker: <span id="sw-status" class="badge">Inactivo</span></p>
+    </div>
+
+    <div class="card">
+      <h2>Prueba de Caché Dinámica (API externa)</h2>
+      <p class="desc">Solicitaremos datos a una API externa. El Service Worker aplicará la estrategia <strong>Network First con fallback a Caché</strong> para peticiones dinámicas.</p>
+      
+      <button id="btn-fetch" class="btn">Consultar Datos de API</button>
+
+      <div id="result-box" class="result-box">
+        <p>Los datos obtenidos de la red o caché aparecerán aquí...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
