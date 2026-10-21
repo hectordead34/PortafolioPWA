@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2: Cámara y Hardware APIs</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Ejercicio 2: Cámara y Web APIs</h1>
+
+    <!-- Estado de Permisos -->
+    <div class="card">
+      <h2>Estado de Permisos de Cámara</h2>
+      <p>Permiso de Cámara: <span id="camera-status" class="badge">Inactivo</span></p>
+    </div>
+
+    <!-- Visor de la Cámara -->
+    <div class="card">
+      <h2>Transmisión en Vivo</h2>
+      <div class="video-container">
+        <video id="video" autoplay playsinline muted></video>
+      </div>
+
+      <div class="controls">
+        <button id="btn-start" class="btn btn-primary">Iniciar Cámara</button>
+        <button id="btn-capture" class="btn btn-success" disabled>Tomar Foto</button>
+        <button id="btn-stop" class="btn btn-danger" disabled>Detener Cámara</button>
+      </div>
+    </div>
+
+    <!-- Captura de Foto -->
+    <div class="card">
+      <h2>Fotografía Capturada</h2>
+      <div id="snapshot-container">
+        <canvas id="canvas" style="display: none;"></canvas>
+        <img id="photo" alt="Tu captura aparecerá aquí" />
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
